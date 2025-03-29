@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import artgenie_logo from "../assets/artgenie_logo.png";
-import star_icon from "../assets/star_icon.svg";
+import credit_star from "../assets/credit_star.svg";
 import profile_icon from "../assets/profile_icon.png";
 
 const Navbar = () => {
   const [user, setUser] = useState(true); // Simulating user authentication state
+  const [showDropdown, setShowDropdown] = useState(false);
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full shadow-md bg-gradient-to-r from-white via-cyan-200 to-cyan-300">
@@ -24,20 +24,32 @@ const Navbar = () => {
           <div className="flex items-center space-x-4 text-sm sm:text-base md:text-lg lg:text-xl font-bold text-gray-700">
             {user ? (
               <>
-                <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2  hover:shadow-lg shadow-cyan-500/50">
-                  <img src={star_icon} alt="star_icon" className="w-3 h-3 sm:w-4 sm:h-4" />
+                <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 hover:shadow-lg shadow-cyan-500/50">
+                  <img src={credit_star} alt="star_icon" className="w-3 h-3 sm:w-4 sm:h-4" />
                   <span>Credit: 50</span>
                 </button>
-                <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2  hover:shadow-lg shadow-cyan-500/50">
-                  <img src={profile_icon} alt="profile_icon" className="w-3 h-3 sm:w-4 sm:h-4" />
-                  <span>Hi! Maneesha</span>
-                </button>
+                <div className="relative" onMouseEnter={() => setShowDropdown(true)} onMouseLeave={() => setShowDropdown(false)}>
+                  <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2 hover:shadow-lg shadow-cyan-500/50">
+                    <img src={profile_icon} alt="profile_icon" className="w-4 h-4 sm:w-4 sm:h-4" />
+                    <span>Hi! Maneesha</span>
+                  </button>
+                  {showDropdown && (
+                    <div className="absolute right-6 mt-2 w-32 bg-white shadow-lg rounded-xl">
+                      <button className="w-full px-4 py-2 text-left hover:bg-cyan-100" onClick={() => setUser(false)}>Log Out</button>
+                    </div>
+                  )}
+                </div>
               </>
-            ) : (
+            ) : (<>
               <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2">
                 <img src={profile_icon} alt="profile_icon" className="w-3 h-3 sm:w-4 sm:h-4" />
                 <span>Sign Up</span>
               </button>
+              <button className="flex items-center space-x-2 border-2 border-white rounded-3xl px-2 py-1 sm:px-3 sm:py-2 md:px-4 md:py-2">
+                <img src={profile_icon} alt="profile_icon" className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span>Sign In</span>
+              </button>
+              </>
             )}
           </div>
         </div>
