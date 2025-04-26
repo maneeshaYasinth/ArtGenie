@@ -2,7 +2,7 @@ import React from 'react';
 
 const BuyCredits = () => {
   return (
-    <div className="flex flex-col items-center justify-center p-6 bg-gray-50 min-h-screen">
+    <div className="flex flex-col items-center justify-center bg-gray-50 min-h-screen">
       <h2 className="text-3xl font-bold mb-8 text-center">Buy Credits</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-5xl">
         
@@ -17,7 +17,7 @@ const BuyCredits = () => {
             <li>✅ Valid for all users</li>
             <li>✅ Great for trying it out</li>
           </ul>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
             Buy Now
           </button>
         </div>
@@ -33,7 +33,7 @@ const BuyCredits = () => {
             <li>✅ Full feature access</li>
             <li>✅ Recommended for creatives</li>
           </ul>
-          <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2 rounded-full transition">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition cursor-pointer">
             Buy Pro
           </button>
         </div>
@@ -49,7 +49,7 @@ const BuyCredits = () => {
             <li>✅ Unlimited creativity</li>
             <li>✅ Ideal for frequent use</li>
           </ul>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300">
+          <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transition duration-300 cursor-pointer">
             Go Ultra
           </button>
         </div>
