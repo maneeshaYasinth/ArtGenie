@@ -15,7 +15,7 @@ const Description = () => {
         </div>
 
         <div className="flex flex-col">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">What Is <span className='text-blue-300'>ARTGENIE?</span></h2>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">What Is <span className='font-Pixelify Sans text-blue-300 '>ARTGENIE?</span></h2>
           <p className="text-lg text-gray-700 leading-relaxed text-justify max-w-lg">
             Art Genie is an AI-powered generative image application designed to bring creative ideas to life with just a few clicks. It allows users to generate stunning visuals across any topic by simply providing prompts or themes, making it accessible to artists, designers, and casual users alike. 
             With a light blue and white themed interface that feels both modern and calming, Art Genie offers a seamless and inspiring experience for anyone looking to create unique artwork, whether for professional projects, personal expression, or pure exploration.
