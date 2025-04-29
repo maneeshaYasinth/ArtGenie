@@ -13,7 +13,7 @@ const Header = () => {
                 </div>
             </div>
             <div>
-              <h1 className='text-5xl text-center mt-8'>Turn Your Text to, Image In Secnds!</h1>
+              <h1 className='text-5xl text-center mt-8'>Turn Your Text to, <span className='text-blue-300'>Image</span> In Secnds!</h1>
             </div>
         </div>
     </div>
